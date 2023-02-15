@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CMS Project</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="CMS - Project">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="keywords" content="CMS, content management">
+  <meta name="author" content="Kevin">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- fav icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/site-identity/favicon.png">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" media="screen" href="node_modules/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" media="screen" href="node_modules/swiper/swiper-bundle.min.css">
+
+  <!-- Main Theme Styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="src/css/theme.min.css">
+  <link rel="stylesheet" media="screen" href="src/css/loading.css">
+</head>
+
+<!-- Body -->
+
+<body>
+
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+
+  <main class="page-wrapper" id="origin">
+  </main>
+  <!-- Footer -->
+  <footer class="footer bg-dark dark-mode pt-5 pb-4 pb-lg-5">
+    <div class="container text-center pt-lg-3">
+      <div class="navbar-brand justify-content-center text-dark">
+        <img src="assets/site-identity/logo.png" class="me-2" width="60" alt="Silicon">
+        <span class="fs-4">CMS</span>
+      </div>
+      <p class="nav d-block fs-sm text-center pt-5 mt-lg-4 mb-0">
+        <span class="text-light opacity-60">&copy; All rights reserved by Kevin Fernandez</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- icon select modal -->
+  <div class="offcanvas offcanvas-end h-100" id="icons_modal" tabindex="-1" style="z-index: 1056; width: 22rem;">
+    <div class="offcanvas-header border-bottom">
+      <div class="row w-100">
+        <div class="col-12 text-end">
+          <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="col-12 selected_icon d-flex align-items-center justify-content-center p-4"></div>
+        <div class="col-12">
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="bx bx-search fs-base"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Search for your icon" id="icons_searcher">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-body">
+      <div class="card text-center border-0" id="icons_card">
+        <div class="card-body px-0">
+          <div class="row g-2" id="icons_container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-header d-flex border-top justify-content-center">
+      <button type="button" class="btn btn-primary btn-sm rounded-2" data-bs-dismiss="offcanvas" aria-label="Close"
+        id="close_icon_selection">Select Icon</button>
+    </div>
+  </div>
+  <div class="modal fade" tabindex="-1" aria-modal="true" role="dialog" style="z-index: 1055;" id="dynamic_modal">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="text-danger error__message"></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#icons_modal">Toggle bottom offcanvas</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top bg-primary shadow-lg shadow-primary">
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+  <!-- Vendor Scripts -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="node_modules/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
+  <script src="node_modules/rellax/rellax.min.js"></script>
+  <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+
+  <!-- templates -->
+  <script src="src/js/controller.js" type="module"></script>
+  <script src="src/js/theme.min.js"></script>
+  <script src="src/js/search_icons.js"></script>
+</body>
+
+</html>

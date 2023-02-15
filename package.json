@@ -1,0 +1,21 @@
+{
+  "name": "cms-project",
+  "version": "1.0.0",
+  "description": "Content Management System Application",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Kevin Fernandez Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "boxicons": "^2.1.4",
+    "parcel": "^2.8.2",
+    "rellax": "^1.12.1",
+    "smooth-scroll": "^16.1.3",
+    "swiper": "^8.4.5",
+    "vanilla-tilt": "^1.8.0"
+  }
+}
